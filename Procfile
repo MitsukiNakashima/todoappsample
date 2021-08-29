@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 works/custombbs
+web: vendor/bin/heroku-php-apache2
