@@ -43,7 +43,12 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "post-install-cmd": [  
+            "php artisan clear-compiled",  
+            "php artisan optimize",  
+            "chmod -R 777 public/"  
+        ]  
     },
     "extra": {
         "laravel": {
@@ -53,7 +58,8 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "bin-dir": "vender/bin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
